@@ -98,15 +98,15 @@ Function: calculate_long_st
 Description: Calculates the time zone
 
 Input: 
-long: Longitude | Float value [-180,180] (degrees)
+longitude: Longitude | Float value [-180,180] (degrees)
 
 Output:
 long_st: Longitude rounded to nearest integer | Integer [-180,180] (degrees)
 
 """
  
-def calculate_long_st(long):
-   long_st=15*math.ceil(long/15)
+def calculate_long_st(longitude):
+   long_st=15*math.ceil(longitude/15)
    return long_st    
    
 
@@ -120,15 +120,15 @@ Input:
 et: Error time | Integer [**range**] (**units**)
 std_time: Standard time | Integer [0,1440] (minutes)
 long_st: Longitude rounded to nearest integer | Integer [-180,180] (degrees)
-long: Longitude | Float value [-180,180] (degrees)
+longitude: Longitude | Float value [-180,180] (degrees)
 
 Output:
 solar_time: Solar time | Integer [**range**] (**units**)
 
 """   
 
-def calculate_solar_time(et,std_time,long_st,long):
-    solar_time=std_time+(4)*(long_st-long)+et
+def calculate_solar_time(et,std_time,long_st,longitude):
+    solar_time=std_time+(4)*(long_st-longitude)+et
     return solar_time  
 
 
