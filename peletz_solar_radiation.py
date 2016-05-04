@@ -133,6 +133,10 @@ def calculate_solar_time(et,std_time,long_st,longitude):
 
 
 
+
+
+
+
 """
 Function: calculate_omega
 Description: Calculates omega
@@ -195,6 +199,9 @@ def calculate_theta(delta,phi,beta,gamma,omega):
     return theta
     
 
+
+'''
+
 #Calculates the solar time for Santander, 3rd january, 11:50h
 santander_n = calculate_n(3,1)
 santander_std_time = calculate_std_time(11,50,santander_n)
@@ -215,6 +222,11 @@ print "solar time = %.3f" % santander_solar_time
 print "omega = %.3f degrees" % santander_omega
 print "delta = %.3f degrees" % santander_delta
 print "theta = %.3f degrees" % santander_theta
+'''
+
+
+
+
 
 
 
@@ -284,6 +296,10 @@ def calculate_gamma_s(omega,theta_z,phi,delta):
 
 
 
+
+'''
+
+
 #Calculates the zenith and solar azimuth angles for Santander at 9:30 AM on February 13
 #Assumes horizontal surface (beta=0)
 santander2_n = calculate_n(13,2)
@@ -306,6 +322,11 @@ print "omega = %.3f degrees" % santander2_omega
 print "delta = %.3f degrees" % santander2_delta
 print "theta_z = %.3f degrees" % santander2_theta_z
 print "gamma_s = %.3f degrees" % santander2_gamma_s
+
+'''
+
+
+
 
 
 
@@ -385,6 +406,7 @@ def calculate_alpha_p(alpha_s,gamma_s,gamma):
     return alpha_p    
 
 
+'''
 
 #Calculates the time of sunrise, solar altitude, zenith, solar azimuth, profile angles
 #For a 60degrees sloped surface facing 25degrees W of S at 4:00 PM solar time 
@@ -408,6 +430,9 @@ print "omega_s = %.3f degrees" % santander3_omega_s
 print "omega_sr = %.3f degrees" % santander3_omega_sr
 print "n_dh = %.3f daylight hours" % santander3_n_dh
 print "alpha_p = %.3f degrees" % santander3_alpha_p
+
+'''
+
 
 
 
@@ -456,7 +481,7 @@ def calculate_h_o(n,phi,delta,omega_s):
 
 
 
-
+'''
 
 #Calculates the day's solar radiation on a horizontal surface in the absence of the atmosphere, at latitude 43 degrees N on April 15
 #Assumes horizontal surface (beta=0)
@@ -472,3 +497,4 @@ print "omega_s = %.3f degrees" % santander4_omega_s
 print "h_o = %.3f W/m^2" % santander4_h_o
 
 
+'''
